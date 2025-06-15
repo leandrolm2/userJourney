@@ -1,6 +1,5 @@
-// Exemplo de uso no app principal (app.js ou index.js)
 import express from 'express';
-import data from './userJourney/route';
+import data from './route';
 
 const app = express();
 app.use(data);
