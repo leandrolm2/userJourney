@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   backend:
@@ -6,15 +6,31 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: challenge_backend
-    
+    restart: always
     ports:
       - "3000:3000"
-    restart: always
+    networks:
+      - challenge-network
 
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.frontend
-  #   ports:
-  #     - "80:80"
-  #   restart: always
+  frontend:
+    build:
+      context: ./frontend/userJourney
+      dockerfile: Dockerfile
+    container_name: challenge_frontend
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    depends_on:
+      - backend
+    networks:
+      - challenge-network
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./frontend/userJourney:/app
+      - /app/node_modules
+
+networks:
+  challenge-network:
+    driver: bridge
+

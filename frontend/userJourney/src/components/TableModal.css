@@ -1,0 +1,169 @@
+.journey-summary-container {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.button.green {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button.green:hover {
+  background-color: #218838;
+}
+
+.journey-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed;
+}
+
+.journey-table th {
+  background-color: #f3f3f3;
+  font-weight: bold;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+.journey-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+.journey-table th:nth-child(1),
+.journey-table td:nth-child(1) {
+  min-width: 150px;
+  width: 20%;
+  word-break: break-word;
+}
+
+.journey-table th:nth-child(2),
+.journey-table td:nth-child(2) {
+  min-width: 500px;
+  width: 60%;
+}
+
+.journey-table th:nth-child(3),
+.journey-table td:nth-child(3) {
+  min-width: 100px;
+  width: 20%;
+}
+
+/* Labels */
+.journey-labels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-label {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #333;
+  border: 1px solid transparent;
+}
+
+.journey-separator {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #999;
+}
+
+/* Cores por origem */
+.journey-label.facebook {
+  background-color: rgba(59, 89, 152, 0.15);
+  color: #3b5998;
+  border-color: #3b5998;
+}
+
+.journey-label.instagram {
+  background-color: rgba(225, 48, 108, 0.15);
+  color: #e1306c;
+  border-color: #e1306c;
+}
+
+.journey-label.google {
+  background-color: rgba(66, 133, 244, 0.15);
+  color: #4285f4;
+  border-color: #4285f4;
+}
+
+.journey-label.manychat {
+  background-color: rgba(0, 126, 229, 0.15);
+  color: #007ee5;
+  border-color: #007ee5;
+}
+
+.journey-label.email {
+  background-color: rgba(108, 117, 125, 0.15);
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.journey-label.organic {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.journey-label.link {
+  background-color: rgba(23, 162, 184, 0.15);
+  color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.journey-label.whatsapp {
+  background-color: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+  border-color: #25d366;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}

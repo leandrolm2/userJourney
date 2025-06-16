@@ -3,7 +3,10 @@ import multer from 'multer';
 import { UserJourneyController } from './userJourney/controller';
 
 const router = Router();
-const upload = multer({ storage: multer.memoryStorage() });
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 20 * 1024 * 1024 }, // 20MB
+});
 const controller = new UserJourneyController();
 
 router.put('/upload', upload.single('file'), controller.uploadFile);
