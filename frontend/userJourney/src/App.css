@@ -1,0 +1,43 @@
+/* Centraliza o conteúdo na tela */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* altura total da tela */
+  padding: 2rem;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.button.green {
+  background-color: #16a34a;
+}
+
+.button.green:hover {
+  background-color: #15803d;
+}
